@@ -2,7 +2,8 @@ const app = new Vue({
     el: '#app',
     data: {
 
-        firstAvatar: "./assets/avatar_io.jpg",
+        
+        activeContacts : 0,
 
         contacts: [
             {
@@ -168,6 +169,11 @@ const app = new Vue({
             }
         ]
     },
+    methods: {
+        showChat(index) {
+            return this.activeContacts = index
+        }
+    }
     
 }
 )

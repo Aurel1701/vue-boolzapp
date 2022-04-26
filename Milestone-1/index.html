@@ -14,7 +14,7 @@
         <section class="users">
             <nav class="my_user">
                 <div class="user_image">
-                    <img :src="firstAvatar" alt="">
+                    <img :src="contacts[0].avatar" alt="">
                     <span class="span-avatar">Nome Utente</span>
                 </div>
                 <div class="user_icons">
@@ -49,10 +49,10 @@
         </section>
 
 
-        <section class="chat">
+        <section class="homepage">
             <div class="chat_user">
-                <div class="avatar_and_access " v-for="contact in contacts" v-if='contact.visible === true'>
-                    <img :src="contact.avatar" alt="">
+                <div class="avatar_and_access" v-for="contact in contacts" v-if='contact.visible === i'>
+                    <img :src="contacts[activeContact].avatar" alt="">
                     <div class=" last_access">
                         <p class="access_time">Ultimo accesso oggi alle</p>
                     </div>
