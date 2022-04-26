@@ -147,7 +147,7 @@ img{
     flex-direction: column;
     padding: 30px;
 }
-.chat_user{
+.current_user{
     display: flex;
     height: 105px;
     align-items: center;
