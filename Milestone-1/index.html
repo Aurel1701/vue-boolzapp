@@ -10,15 +10,77 @@
 </head>
 <body>
     <div id="app" class="card">
-    
-         
-         
+
+        <section class="users">
+            <nav class="my_user">
+                <div class="user_image">
+                    <img :src="firstAvatar" alt="">
+                    <span class="span-avatar">Nome Utente</span>
+                </div>
+                <div class="user_icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </nav>
+            <div class="notification">
+                <i class="fas fa-bell-slash"></i>
+                <div class="notification_link">
+                    <p>Ricevi notifiche di nuovi messaggi</p>
+                    <a href="#">Attiva notifiche desktop</a>
+                </div>
+            </div>
+
+            <!-- search in a bar -->
+
+            <div class="search_bar">
+                <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                <i class="fas fa-search"></i>
+            </div>
+
+            <!-- list whatsapp-->
+
+            <div class="contact_list">
+                <div v-for="(user, index) in contacts" class="contact">
+                    <img :src="user.avatar" alt="">
+                    {{user.name}}
+                </div>
+            </div>
+        </section>
+
+
+        <section class="chat">
+            <div class="chat_user">
+                <div class="avatar_and_access " v-for="contact in contacts" v-if='contact.visible === true'>
+                    <img :src="contact.avatar" alt="">
+                    <div class=" last_access">
+                        <p class="access_time">Ultimo accesso oggi alle</p>
+                    </div>
+                </div>
+
+                <div class="chat_icons">
+                    <i class="fas fa-search"></i>
+                    <i class="fas fa-paperclip"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            
+            <div class="chat_background" >
+                <div class="message">
+                    <small class="message_date"></small>
+                </div>
+                <div class="chat_input">
+                    <i class="far fa-smile"></i>
+                    <input type="text" placeholder="Scrivi un messaggio">
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+        </section>
     </div>
 
      
-    <!-- Vue JS -->
+    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-    <!-- link JS  -->
     <script src="./assets/app.js"></script>
 </body>
 </html>
