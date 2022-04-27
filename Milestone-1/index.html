@@ -56,7 +56,7 @@
                 <div class="avatar_and_access" v-for="contact in contacts">
                     <img :src=" './assets/avatar' + contact.avatar +  '.jpg ' ">
                     <div class=" last_access">
-                        <p class="access_time">Ultimo accesso oggi alle</p>
+                        <p class="access_time">Ultimo accesso oggi alle {{ contact.date }}</p>
                     </div>
                 </div>
 
