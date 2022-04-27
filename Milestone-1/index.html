@@ -43,7 +43,7 @@
             <div class="contact_list">
                 <div v-for="(user, index) in contacts" class="contact" 
                   @click="activeChat(index)">
-                    <img :src="user.avatar + contacts[activeContact]" alt="">
+                    <img :src="user.avatar" alt="">
                     {{user.name}}
                 </div>
             </div>
@@ -53,7 +53,7 @@
 
         <section class="homepage">
             <div class="current_user">
-                <div class="avatar_and_access" v-for="contact in contacts" 
+                <div class="avatar_and_access" v-for="contact in contacts[activeContact]" 
                 v-if='contact.visible === index'>
                     <img :src="contacts[activeContact].avatar" alt="">
                     <div class=" last_access">
