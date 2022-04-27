@@ -170,9 +170,10 @@ const app = new Vue({
         ]
     },
     methods: {
-        showChat(index) {
-            return this.activeContacts = index
-        }
+        activeChat(index) {
+            this.activeContacts = index;
+            console.log(this.activeContacts);
+        },
     }
     
 }
