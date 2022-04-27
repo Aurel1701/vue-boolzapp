@@ -3,7 +3,7 @@ const app = new Vue({
     data: {
 
         
-        
+        activeContacts : 0,
 
         contacts: [
             {
@@ -169,7 +169,7 @@ const app = new Vue({
             }
         ]
     },
-    activeContacts : 0,
+    
     methods: {
         activeChat(index) {
             this.activeContacts = index;

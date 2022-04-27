@@ -209,14 +209,14 @@ img{
     margin: 10px;
     position: relative;
 }
-/*.message.sent{
+.message.sent{
     background-color: #D5F9BA;
     align-self: flex-end;
-}*/
-/*.message.received{
+}
+.message.received{
     background-color: white;
     align-self: flex-start;
-}*/
+}
 .message_date{
     color: grey;
     position: absolute;
