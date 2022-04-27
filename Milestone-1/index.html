@@ -43,12 +43,13 @@
             <div class="contact_list">
                 <div v-for="(user, index) in contacts" class="contact" 
                   @click="activeChat(index)">
-                    <img :src="user.avatar" alt="">
+                    <img :src="user.avatar + contacts[activeContact]" alt="">
                     {{user.name}}
                 </div>
             </div>
         </section>
 
+        <!-- user selezionato-->
 
         <section class="homepage">
             <div class="current_user">
