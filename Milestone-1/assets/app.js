@@ -8,7 +8,7 @@ const app = new Vue({
         contacts: [
             {
                 name: 'Michele',
-                avatar: './assets/avatar_1.jpg',
+                avatar: '_1',
                 visible: true,
                 messages: [
                     {
@@ -30,7 +30,7 @@ const app = new Vue({
             },
             {
                 name: 'Fabio',
-                avatar: './assets/avatar_2.jpg',
+                avatar: '_2',
                 visible: true,
                 messages: [
                     {
@@ -52,7 +52,7 @@ const app = new Vue({
             },
             {
                 name: 'Samuele',
-                avatar: './assets/avatar_3.jpg',
+                avatar: '_3',
                 visible: true,
                 messages: [
                     {
@@ -74,7 +74,7 @@ const app = new Vue({
             },
             {
                 name: 'Alessandro B.',
-                avatar: './assets/avatar_4.jpg',
+                avatar: '_4',
                 visible: true,
                 messages: [
                     {
@@ -91,7 +91,7 @@ const app = new Vue({
             },
             {
                 name: 'Alessandro L.',
-                avatar: './assets/avatar_5_360.jpg',
+                avatar: '_5',
                 visible: true,
                 messages: [
                     {
@@ -108,7 +108,7 @@ const app = new Vue({
             },
             {
                 name: 'Claudia',
-                avatar: './assets/avatar_6.jpg',
+                avatar: '_6',
                 visible: true,
                 messages: [
                     {
@@ -130,7 +130,7 @@ const app = new Vue({
             },
             {
                 name: 'Federico',
-                avatar: './assets/avatar_7.jpg',
+                avatar: '_7',
                 visible: true,
                 messages: [
                     {
@@ -147,7 +147,7 @@ const app = new Vue({
             },
             {
                 name: 'Davide',
-                avatar: './assets/avatar_8.jpg',
+                avatar: '_8',
                 visible: true,
                 messages: [
                     {
