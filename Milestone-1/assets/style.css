@@ -169,7 +169,13 @@ img{
 
 .chat_user .access_time{
     color:grey;
+    
 }
+.access_time{
+    padding-left: 20px;
+    
+}
+
 
 .chat_icons i{
     margin: 0 10px;

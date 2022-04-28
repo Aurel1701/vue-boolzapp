@@ -4,6 +4,7 @@ const app = new Vue({
         search: '',
         message: '',
         activeContacts: 0,
+        
 
 
         contacts: [
@@ -196,6 +197,7 @@ const app = new Vue({
             setTimeout(this.answerMes, 1000, message)
 
         },
+
         answerMes() {
             
             const message = {
@@ -205,7 +207,21 @@ const app = new Vue({
             }
             this.contacts[this.activeContacts].messages.push(message)
 
-        }
+        },
+
+        // search a contact in a contact list - milestone4
+        searchContact () {
+            this.contacts.forEach((contact) => {   // Ciclo tra i contatti
+              let contactName = contact.name.toLowerCase();  
+              let searchName = this.search.toLowerCase();
+              if(contactName.includes(searchName)) {  
+                contact.visible = true;  
+              } else {
+                contact.visible = false;
+              }
+            })
+          },
+
 
 
     }
