@@ -1,9 +1,10 @@
 const app = new Vue({
     el: '#app',
     data: {
+        search: '',
+        message: '',
+        activeContacts: 0,
 
-        
-        activeContacts : 0,
 
         contacts: [
             {
@@ -169,14 +170,45 @@ const app = new Vue({
             }
         ]
     },
-    
+
+    // milestone2
+
     methods: {
         activeChat(index) {
             this.activeContacts = index;
-            
+
         },
-        
+
+        // add new message - milestone3
+        newMessage() {
+
+            const message = {
+                date: new Date().toLocaleDateString('it'),
+                message: this.message,
+                status: 'sent'
+            }
+
+
+            const user_x = this.contacts[this.activeContacts].messages
+            user_x.push(message)
+            this.message = ''
+
+            setTimeout(this.answerMes, 1000, message)
+
+        },
+        answerMes(messages) {
+            
+            const message = {
+                date: new Date().toLocaleDateString('it'),
+                message: 'OK!!',
+                status: 'revived'
+            }
+            this.contacts[this.activeContacts].messages.push(message)
+
+        }
+
+
     }
-    
+
 }
 )

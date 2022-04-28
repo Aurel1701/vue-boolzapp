@@ -15,7 +15,7 @@
             <nav class="my_user">
                 <div class="user_image">
                     <img src="./assets/avatar_io.jpg" alt="">
-                    <span class="span-avatar">Aurel</span>
+                    <span class="span-avatar">Sofia</span>
                 </div>
                 <div class="user_icons">
                     <i class="fas fa-circle-notch"></i>
@@ -34,7 +34,7 @@
             <!-- search in a bar -->
 
             <div class="search_bar">
-                <input type="search" name="search" id="search" placeholder="Cerca o inizia una nuova chat">
+                <input type="search" name="search"  v-model="search"  placeholder="Cerca o inizia una nuova chat">
                 <i class="fas fa-search"></i>
             </div>
 
@@ -74,7 +74,7 @@
                 </div>
                 <div class="chat_input">
                     <i class="far fa-smile"></i>
-                    <input type="text" placeholder="Scrivi un messaggio">
+                    <input type="text" placeholder="Scrivi un messaggio" v-model="message" v-on:keyup.enter="newMessage" >
                     <i class="fas fa-microphone"></i>
                 </div>
             </div>
