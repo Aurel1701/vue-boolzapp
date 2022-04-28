@@ -212,7 +212,7 @@ const app = new Vue({
         // search a contact in a contact list - milestone4
         searchContact () {
             this.contacts.forEach((contact) => {   // Ciclo tra i contatti
-              let contactName = contact.name.toLowerCase();  
+              let contactName = contact.name.toLowerCase();  // trasformo tutto in minuscolo per la ricerca 
               let searchName = this.search.toLowerCase();
               if(contactName.includes(searchName)) {  
                 contact.visible = true;  
