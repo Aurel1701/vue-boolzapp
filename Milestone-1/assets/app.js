@@ -196,12 +196,12 @@ const app = new Vue({
             setTimeout(this.answerMes, 1000, message)
 
         },
-        answerMes(messages) {
+        answerMes() {
             
             const message = {
                 date: new Date().toLocaleDateString('it'),
                 message: 'OK!!',
-                status: 'revived'
+                status: 'received'
             }
             this.contacts[this.activeContacts].messages.push(message)
 
