@@ -41,7 +41,7 @@
             <!-- list whatsapp-->
 
             <div class="contact_list">
-                <div v-for="(user, index) in contacts" class="contact" @click="activeChat(index)" v-if="contacts[activeContacts].visible" >
+                <div v-for="(user, index) in contacts" class="contact" @click="activeChat(index)" v-if="contacts[index].visible" >
                     <img :src="'assets/avatar' + user.avatar + '.jpg'" alt="">
                     {{user.name}}
                 </div>
